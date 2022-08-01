@@ -8,6 +8,7 @@ The goal of this project is to measure your skills and architectural level with 
 
 
 ## What to do
+
 We want to visualize the live contents of some channels.
 
 Create a vertical list containing information about live channels currently playing. Channels must be ordered by Id.

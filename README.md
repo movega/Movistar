@@ -28,7 +28,7 @@ Apart from this, use whichever tool you deem necessary for the project.
 
 ## Requests
 
-Live Channels ->  https://jsonkeeper.com/b/AXKN
+Live Channels ->  https://api.npoint.io/f5552c061b8cf68cffa0
 
-24677 Detail -> https://jsonkeeper.com/b/TCA0
+24677 Detail -> https://api.npoint.io/f3c6446abeb1c5a82079
 

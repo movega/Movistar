@@ -1,0 +1,766 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		09F70393D02DF87DF1F7DBE5 /* Pods_movistar_TechnicalTryout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B025D234B71632E5196AA345 /* Pods_movistar_TechnicalTryout.framework */; };
+		D7331C012BED340200A25BA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7331C002BED340200A25BA6 /* AppDelegate.swift */; };
+		D7331C032BED340200A25BA6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7331C022BED340200A25BA6 /* SceneDelegate.swift */; };
+		D7331C052BED340200A25BA6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7331C042BED340200A25BA6 /* ViewController.swift */; };
+		D7331C0A2BED340400A25BA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7331C092BED340400A25BA6 /* Assets.xcassets */; };
+		D7331C0D2BED340400A25BA6 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = D7331C0C2BED340400A25BA6 /* Base */; };
+		D7331C182BED340400A25BA6 /* movistar_TechnicalTryoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7331C172BED340400A25BA6 /* movistar_TechnicalTryoutTests.swift */; };
+		D7331C222BED340400A25BA6 /* movistar_TechnicalTryoutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7331C212BED340400A25BA6 /* movistar_TechnicalTryoutUITests.swift */; };
+		D7331C242BED340400A25BA6 /* movistar_TechnicalTryoutUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7331C232BED340400A25BA6 /* movistar_TechnicalTryoutUITestsLaunchTests.swift */; };
+		D7331C342BED355200A25BA6 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7331C332BED355200A25BA6 /* Channel.swift */; };
+		D7331C362BED35CE00A25BA6 /* LiveProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7331C352BED35CE00A25BA6 /* LiveProgram.swift */; };
+		D7331C382BED36C200A25BA6 /* ChannelListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7331C372BED36C200A25BA6 /* ChannelListViewModel.swift */; };
+		D75D65AC2BEE88870024C3EA /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75D65AB2BEE88870024C3EA /* ApiService.swift */; };
+		D75D65B02BEE8BA50024C3EA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75D65AF2BEE8BA50024C3EA /* Constants.swift */; };
+		D75D65B42BEE8DBC0024C3EA /* BaseApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75D65B32BEE8DBC0024C3EA /* BaseApiService.swift */; };
+		D75D65F22BEE96740024C3EA /* ChannelListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75D65F12BEE96740024C3EA /* ChannelListCell.swift */; };
+		D75D65F42BEE988A0024C3EA /* ChannelListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75D65F32BEE988A0024C3EA /* ChannelListCellViewModel.swift */; };
+		D75D65F62BEEA14E0024C3EA /* AccessibleLiveProgramManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75D65F52BEEA14E0024C3EA /* AccessibleLiveProgramManager.swift */; };
+		D7744C372BED398B001EB292 /* ChannelListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7744C362BED398B001EB292 /* ChannelListResponse.swift */; };
+		D7744C392BED39E0001EB292 /* ChannelListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7744C382BED39E0001EB292 /* ChannelListView.swift */; };
+		D7744C3B2BED39F0001EB292 /* ChannelDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7744C3A2BED39F0001EB292 /* ChannelDetailView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D7331C142BED340400A25BA6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D7331BF52BED340200A25BA6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7331BFC2BED340200A25BA6;
+			remoteInfo = "movistar+TechnicalTryout";
+		};
+		D7331C1E2BED340400A25BA6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D7331BF52BED340200A25BA6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7331BFC2BED340200A25BA6;
+			remoteInfo = "movistar+TechnicalTryout";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		626D099CBE31106578B5C0F9 /* Pods-movistar+TechnicalTryout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movistar+TechnicalTryout.release.xcconfig"; path = "Target Support Files/Pods-movistar+TechnicalTryout/Pods-movistar+TechnicalTryout.release.xcconfig"; sourceTree = "<group>"; };
+		82E515E3F8D87B395539C3AE /* Pods-movistar+TechnicalTryout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-movistar+TechnicalTryout.debug.xcconfig"; path = "Target Support Files/Pods-movistar+TechnicalTryout/Pods-movistar+TechnicalTryout.debug.xcconfig"; sourceTree = "<group>"; };
+		B025D234B71632E5196AA345 /* Pods_movistar_TechnicalTryout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_movistar_TechnicalTryout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7331BFD2BED340200A25BA6 /* movistar+TechnicalTryout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "movistar+TechnicalTryout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7331C002BED340200A25BA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D7331C022BED340200A25BA6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D7331C042BED340200A25BA6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D7331C092BED340400A25BA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D7331C0C2BED340400A25BA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D7331C0E2BED340400A25BA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7331C132BED340400A25BA6 /* movistar+TechnicalTryoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "movistar+TechnicalTryoutTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7331C172BED340400A25BA6 /* movistar_TechnicalTryoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = movistar_TechnicalTryoutTests.swift; sourceTree = "<group>"; };
+		D7331C1D2BED340400A25BA6 /* movistar+TechnicalTryoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "movistar+TechnicalTryoutUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7331C212BED340400A25BA6 /* movistar_TechnicalTryoutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = movistar_TechnicalTryoutUITests.swift; sourceTree = "<group>"; };
+		D7331C232BED340400A25BA6 /* movistar_TechnicalTryoutUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = movistar_TechnicalTryoutUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D7331C332BED355200A25BA6 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		D7331C352BED35CE00A25BA6 /* LiveProgram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveProgram.swift; sourceTree = "<group>"; };
+		D7331C372BED36C200A25BA6 /* ChannelListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListViewModel.swift; sourceTree = "<group>"; };
+		D75D65AB2BEE88870024C3EA /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		D75D65AF2BEE8BA50024C3EA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D75D65B32BEE8DBC0024C3EA /* BaseApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApiService.swift; sourceTree = "<group>"; };
+		D75D65F12BEE96740024C3EA /* ChannelListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListCell.swift; sourceTree = "<group>"; };
+		D75D65F32BEE988A0024C3EA /* ChannelListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListCellViewModel.swift; sourceTree = "<group>"; };
+		D75D65F52BEEA14E0024C3EA /* AccessibleLiveProgramManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleLiveProgramManager.swift; sourceTree = "<group>"; };
+		D7744C362BED398B001EB292 /* ChannelListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListResponse.swift; sourceTree = "<group>"; };
+		D7744C382BED39E0001EB292 /* ChannelListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListView.swift; sourceTree = "<group>"; };
+		D7744C3A2BED39F0001EB292 /* ChannelDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelDetailView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D7331BFA2BED340200A25BA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09F70393D02DF87DF1F7DBE5 /* Pods_movistar_TechnicalTryout.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7331C102BED340400A25BA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7331C1A2BED340400A25BA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2D38C08859E71BB1C42346DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				82E515E3F8D87B395539C3AE /* Pods-movistar+TechnicalTryout.debug.xcconfig */,
+				626D099CBE31106578B5C0F9 /* Pods-movistar+TechnicalTryout.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D7331BF42BED340200A25BA6 = {
+			isa = PBXGroup;
+			children = (
+				D7331BFF2BED340200A25BA6 /* movistar+TechnicalTryout */,
+				D7331C162BED340400A25BA6 /* movistar+TechnicalTryoutTests */,
+				D7331C202BED340400A25BA6 /* movistar+TechnicalTryoutUITests */,
+				D7331BFE2BED340200A25BA6 /* Products */,
+				2D38C08859E71BB1C42346DB /* Pods */,
+				E48436B360B5B5E8DCF1C26A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D7331BFE2BED340200A25BA6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D7331BFD2BED340200A25BA6 /* movistar+TechnicalTryout.app */,
+				D7331C132BED340400A25BA6 /* movistar+TechnicalTryoutTests.xctest */,
+				D7331C1D2BED340400A25BA6 /* movistar+TechnicalTryoutUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D7331BFF2BED340200A25BA6 /* movistar+TechnicalTryout */ = {
+			isa = PBXGroup;
+			children = (
+				D75D65B22BEE8BCF0024C3EA /* ChannelDetailInfo */,
+				D75D65B12BEE8BBF0024C3EA /* ChannelList */,
+				D75D65AE2BEE8B8A0024C3EA /* Resources */,
+				D75D65AD2BEE88C20024C3EA /* Network */,
+				D7331C302BED352100A25BA6 /* Models */,
+				D7331C002BED340200A25BA6 /* AppDelegate.swift */,
+				D7331C022BED340200A25BA6 /* SceneDelegate.swift */,
+				D7331C042BED340200A25BA6 /* ViewController.swift */,
+				D7331C092BED340400A25BA6 /* Assets.xcassets */,
+				D7331C0B2BED340400A25BA6 /* LaunchScreen.storyboard */,
+				D7331C0E2BED340400A25BA6 /* Info.plist */,
+			);
+			path = "movistar+TechnicalTryout";
+			sourceTree = "<group>";
+		};
+		D7331C162BED340400A25BA6 /* movistar+TechnicalTryoutTests */ = {
+			isa = PBXGroup;
+			children = (
+				D7331C172BED340400A25BA6 /* movistar_TechnicalTryoutTests.swift */,
+			);
+			path = "movistar+TechnicalTryoutTests";
+			sourceTree = "<group>";
+		};
+		D7331C202BED340400A25BA6 /* movistar+TechnicalTryoutUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D7331C212BED340400A25BA6 /* movistar_TechnicalTryoutUITests.swift */,
+				D7331C232BED340400A25BA6 /* movistar_TechnicalTryoutUITestsLaunchTests.swift */,
+			);
+			path = "movistar+TechnicalTryoutUITests";
+			sourceTree = "<group>";
+		};
+		D7331C302BED352100A25BA6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D7331C332BED355200A25BA6 /* Channel.swift */,
+				D7331C352BED35CE00A25BA6 /* LiveProgram.swift */,
+				D7744C362BED398B001EB292 /* ChannelListResponse.swift */,
+				D75D65F52BEEA14E0024C3EA /* AccessibleLiveProgramManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D7331C312BED352B00A25BA6 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D7331C372BED36C200A25BA6 /* ChannelListViewModel.swift */,
+				D75D65F32BEE988A0024C3EA /* ChannelListCellViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D75D65AD2BEE88C20024C3EA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D75D65AB2BEE88870024C3EA /* ApiService.swift */,
+				D75D65B32BEE8DBC0024C3EA /* BaseApiService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D75D65AE2BEE8B8A0024C3EA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D75D65AF2BEE8BA50024C3EA /* Constants.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D75D65B12BEE8BBF0024C3EA /* ChannelList */ = {
+			isa = PBXGroup;
+			children = (
+				D7744C382BED39E0001EB292 /* ChannelListView.swift */,
+				D75D65F12BEE96740024C3EA /* ChannelListCell.swift */,
+				D7331C312BED352B00A25BA6 /* ViewModels */,
+			);
+			path = ChannelList;
+			sourceTree = "<group>";
+		};
+		D75D65B22BEE8BCF0024C3EA /* ChannelDetailInfo */ = {
+			isa = PBXGroup;
+			children = (
+				D7744C3A2BED39F0001EB292 /* ChannelDetailView.swift */,
+			);
+			path = ChannelDetailInfo;
+			sourceTree = "<group>";
+		};
+		E48436B360B5B5E8DCF1C26A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B025D234B71632E5196AA345 /* Pods_movistar_TechnicalTryout.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D7331BFC2BED340200A25BA6 /* movistar+TechnicalTryout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7331C272BED340400A25BA6 /* Build configuration list for PBXNativeTarget "movistar+TechnicalTryout" */;
+			buildPhases = (
+				BF934C723E1C68E96B770A9F /* [CP] Check Pods Manifest.lock */,
+				D7331BF92BED340200A25BA6 /* Sources */,
+				D7331BFA2BED340200A25BA6 /* Frameworks */,
+				D7331BFB2BED340200A25BA6 /* Resources */,
+				E3A86FEAE68E62E4B7D0F490 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "movistar+TechnicalTryout";
+			productName = "movistar+TechnicalTryout";
+			productReference = D7331BFD2BED340200A25BA6 /* movistar+TechnicalTryout.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D7331C122BED340400A25BA6 /* movistar+TechnicalTryoutTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7331C2A2BED340400A25BA6 /* Build configuration list for PBXNativeTarget "movistar+TechnicalTryoutTests" */;
+			buildPhases = (
+				D7331C0F2BED340400A25BA6 /* Sources */,
+				D7331C102BED340400A25BA6 /* Frameworks */,
+				D7331C112BED340400A25BA6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D7331C152BED340400A25BA6 /* PBXTargetDependency */,
+			);
+			name = "movistar+TechnicalTryoutTests";
+			productName = "movistar+TechnicalTryoutTests";
+			productReference = D7331C132BED340400A25BA6 /* movistar+TechnicalTryoutTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D7331C1C2BED340400A25BA6 /* movistar+TechnicalTryoutUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D7331C2D2BED340400A25BA6 /* Build configuration list for PBXNativeTarget "movistar+TechnicalTryoutUITests" */;
+			buildPhases = (
+				D7331C192BED340400A25BA6 /* Sources */,
+				D7331C1A2BED340400A25BA6 /* Frameworks */,
+				D7331C1B2BED340400A25BA6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D7331C1F2BED340400A25BA6 /* PBXTargetDependency */,
+			);
+			name = "movistar+TechnicalTryoutUITests";
+			productName = "movistar+TechnicalTryoutUITests";
+			productReference = D7331C1D2BED340400A25BA6 /* movistar+TechnicalTryoutUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D7331BF52BED340200A25BA6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					D7331BFC2BED340200A25BA6 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					D7331C122BED340400A25BA6 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = D7331BFC2BED340200A25BA6;
+					};
+					D7331C1C2BED340400A25BA6 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = D7331BFC2BED340200A25BA6;
+					};
+				};
+			};
+			buildConfigurationList = D7331BF82BED340200A25BA6 /* Build configuration list for PBXProject "movistar+TechnicalTryout" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D7331BF42BED340200A25BA6;
+			productRefGroup = D7331BFE2BED340200A25BA6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D7331BFC2BED340200A25BA6 /* movistar+TechnicalTryout */,
+				D7331C122BED340400A25BA6 /* movistar+TechnicalTryoutTests */,
+				D7331C1C2BED340400A25BA6 /* movistar+TechnicalTryoutUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D7331BFB2BED340200A25BA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7331C0A2BED340400A25BA6 /* Assets.xcassets in Resources */,
+				D7331C0D2BED340400A25BA6 /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7331C112BED340400A25BA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7331C1B2BED340400A25BA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BF934C723E1C68E96B770A9F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-movistar+TechnicalTryout-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3A86FEAE68E62E4B7D0F490 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-movistar+TechnicalTryout/Pods-movistar+TechnicalTryout-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-movistar+TechnicalTryout/Pods-movistar+TechnicalTryout-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-movistar+TechnicalTryout/Pods-movistar+TechnicalTryout-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D7331BF92BED340200A25BA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7744C392BED39E0001EB292 /* ChannelListView.swift in Sources */,
+				D7331C382BED36C200A25BA6 /* ChannelListViewModel.swift in Sources */,
+				D7744C3B2BED39F0001EB292 /* ChannelDetailView.swift in Sources */,
+				D7331C052BED340200A25BA6 /* ViewController.swift in Sources */,
+				D75D65F22BEE96740024C3EA /* ChannelListCell.swift in Sources */,
+				D7331C342BED355200A25BA6 /* Channel.swift in Sources */,
+				D75D65F42BEE988A0024C3EA /* ChannelListCellViewModel.swift in Sources */,
+				D7744C372BED398B001EB292 /* ChannelListResponse.swift in Sources */,
+				D75D65AC2BEE88870024C3EA /* ApiService.swift in Sources */,
+				D7331C362BED35CE00A25BA6 /* LiveProgram.swift in Sources */,
+				D7331C012BED340200A25BA6 /* AppDelegate.swift in Sources */,
+				D75D65B42BEE8DBC0024C3EA /* BaseApiService.swift in Sources */,
+				D7331C032BED340200A25BA6 /* SceneDelegate.swift in Sources */,
+				D75D65B02BEE8BA50024C3EA /* Constants.swift in Sources */,
+				D75D65F62BEEA14E0024C3EA /* AccessibleLiveProgramManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7331C0F2BED340400A25BA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7331C182BED340400A25BA6 /* movistar_TechnicalTryoutTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7331C192BED340400A25BA6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7331C242BED340400A25BA6 /* movistar_TechnicalTryoutUITestsLaunchTests.swift in Sources */,
+				D7331C222BED340400A25BA6 /* movistar_TechnicalTryoutUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D7331C152BED340400A25BA6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7331BFC2BED340200A25BA6 /* movistar+TechnicalTryout */;
+			targetProxy = D7331C142BED340400A25BA6 /* PBXContainerItemProxy */;
+		};
+		D7331C1F2BED340400A25BA6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7331BFC2BED340200A25BA6 /* movistar+TechnicalTryout */;
+			targetProxy = D7331C1E2BED340400A25BA6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D7331C0B2BED340400A25BA6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D7331C0C2BED340400A25BA6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D7331C252BED340400A25BA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D7331C262BED340400A25BA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D7331C282BED340400A25BA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82E515E3F8D87B395539C3AE /* Pods-movistar+TechnicalTryout.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 87384N2FLP;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "movistar+TechnicalTryout/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alvarovega.movistar-TechnicalTryout";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D7331C292BED340400A25BA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 626D099CBE31106578B5C0F9 /* Pods-movistar+TechnicalTryout.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 87384N2FLP;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "movistar+TechnicalTryout/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alvarovega.movistar-TechnicalTryout";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D7331C2B2BED340400A25BA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 87384N2FLP;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alvarovega.movistar-TechnicalTryoutTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/movistar+TechnicalTryout.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/movistar+TechnicalTryout";
+			};
+			name = Debug;
+		};
+		D7331C2C2BED340400A25BA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 87384N2FLP;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alvarovega.movistar-TechnicalTryoutTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/movistar+TechnicalTryout.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/movistar+TechnicalTryout";
+			};
+			name = Release;
+		};
+		D7331C2E2BED340400A25BA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 87384N2FLP;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alvarovega.movistar-TechnicalTryoutUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "movistar+TechnicalTryout";
+			};
+			name = Debug;
+		};
+		D7331C2F2BED340400A25BA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 87384N2FLP;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alvarovega.movistar-TechnicalTryoutUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "movistar+TechnicalTryout";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D7331BF82BED340200A25BA6 /* Build configuration list for PBXProject "movistar+TechnicalTryout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7331C252BED340400A25BA6 /* Debug */,
+				D7331C262BED340400A25BA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7331C272BED340400A25BA6 /* Build configuration list for PBXNativeTarget "movistar+TechnicalTryout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7331C282BED340400A25BA6 /* Debug */,
+				D7331C292BED340400A25BA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7331C2A2BED340400A25BA6 /* Build configuration list for PBXNativeTarget "movistar+TechnicalTryoutTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7331C2B2BED340400A25BA6 /* Debug */,
+				D7331C2C2BED340400A25BA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D7331C2D2BED340400A25BA6 /* Build configuration list for PBXNativeTarget "movistar+TechnicalTryoutUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D7331C2E2BED340400A25BA6 /* Debug */,
+				D7331C2F2BED340400A25BA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D7331BF52BED340200A25BA6 /* Project object */;
+}

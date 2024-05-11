@@ -29,6 +29,6 @@ struct LiveProgram: Decodable {
 
 extension LiveProgram {
     func isAccessible() -> Bool {
-        return AccessibleLiveProgramManager.shared.isChannelAccessible(id)
+        return LiveProgramManager.shared.isChannelAccessible(id)
     }
 }

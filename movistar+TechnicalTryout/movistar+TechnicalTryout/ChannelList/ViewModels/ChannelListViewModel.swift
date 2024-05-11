@@ -21,7 +21,12 @@ class ChannelListViewModel {
     func getChannelList() {
         ApiService.shared.getChannelList().map { response in
             let sortedChannels = response.channels.sorted(by: { $0.id < $1.id })
-            return ChannelListResponse(channels: sortedChannels, currentTime: response.currentTime)
+            let filteredChannels = self.getLiveChannels(channels: sortedChannels, currentTime: response.currentTime)
+            return ChannelListResponse(channels: filteredChannels, currentTime: response.currentTime)
         }.bind(to: self.channelsListResponseRelay).disposed(by: disposeBag)
+    }
+    
+    func getLiveChannels(channels: [Channel], currentTime: Double) -> [Channel] {
+        ChannelManager.shared.isChannelLive(channels: channels, currentTime: currentTime)
     }
 }

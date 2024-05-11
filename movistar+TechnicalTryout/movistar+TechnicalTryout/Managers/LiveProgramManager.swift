@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct AccessibleLiveProgramManager {
-    static let shared = AccessibleLiveProgramManager()
+struct LiveProgramManager {
+    static let shared = LiveProgramManager()
 
     private let accessibleIds: [Int] = [24677]
 

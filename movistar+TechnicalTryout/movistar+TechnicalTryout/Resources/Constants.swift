@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Constants {
     struct URL {
@@ -20,5 +21,23 @@ struct Constants {
     enum Errors: String {
         case wrongUrl = "Invalid URL"
         case failedToParseUrl = "Failed to decode the url"
+        case unknownError = "Unknown error"
+    }
+    
+    struct Strings {
+        struct DetailView {
+            static let schedule = "Horario"
+            static let description = "Resumen"
+        }
+        
+        struct ChannelList {
+            static let title = "TV Guide"
+        }
+    }
+    
+    struct Colors {
+        static let text: UIColor = .black
+        static let background: UIColor = .white
+        static let cell: UIColor = .white
     }
 }

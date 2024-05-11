@@ -7,43 +7,64 @@
 
 import Foundation
 import UIKit
+import RxSwift
+import RxCocoa
 
 class ChannelListView: UIViewController {
     
-    // Creamos la tableView
     private let tableView: UITableView = {
         let tableView = UITableView()
         tableView.register(ChannelListCell.self, forCellReuseIdentifier: ChannelListCell.identifier)
         return tableView
     }()
     
-    var channelList: ChannelListViewModel? = ChannelListViewModel(apiService: ApiService())
+    var viewModel = ChannelListViewModel()
+    let disposeBag = DisposeBag()
+    var channels: [Channel]?
+    var currentTime: Double?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = Constants.Strings.ChannelList.title
+        
         tableView.delegate = self
         tableView.dataSource = self
         configureUI()
-        channelList?.getChannelList()
+        
+        self.viewModel.channelList.asObservable().subscribe(onNext:{
+            [weak self] response in
+            guard let self, let response else { return }
+           DispatchQueue.main.async {
+               self.channels = response.channels
+               self.currentTime = response.currentTime
+               self.tableView.reloadData()
+            }
+        }).disposed(by: disposeBag)
+        
+        self.viewModel.getChannelList()
+        
     }
     
     private func configureUI() {
-        
-        tableView.backgroundColor = .black
+        tableView.backgroundColor = Constants.Colors.background
         tableView.frame = view.bounds
         view.addSubview(tableView)
+        tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
     }
 }
 
 extension ChannelListView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return channelList?.channels?.count ?? 0
+        guard let channels else { return 0 }
+        return channels.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ChannelListCell.identifier, for: indexPath) as! ChannelListCell
-        cell.viewModel = ChannelListCellViewModel(channel: channelList?.channels?[indexPath.row] ?? Channel(id: 0, logo: "", name: "", live_program: LiveProgram(id: 0, title: "", end_time: "", start_time: "")), currentTime: channelList?.currentTime ?? 0)
+        if let channel = channels?[indexPath.row], let currentTime  {
+            cell.viewModel = ChannelListCellViewModel(channel: channel, currentTime: currentTime)
+        }
         return cell
     }
     
@@ -52,15 +73,15 @@ extension ChannelListView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let channel = channelList?.channels?[indexPath.row] else { return }
+        guard let channel = channels?[indexPath.row] else { return }
         
-        if channel.live_program.isAccessible() {
-            let channelDetailView = ChannelDetailView()
-            navigationController?.pushViewController(channelDetailView, animated: true)
+        if channel.liveProgram.isAccessible() {
+            let channelDetailView = InfoDetailView(viewModel: InfoDetailViewModel(channelName: channel.name, channelLogo: channel.logo))
+            Router.shared.navigateToView(viewController: channelDetailView, from: self, animated: true)
         } else {
-            print("canal no accesible")
+            Router.shared.showError(message: Constants.Errors.unknownError.rawValue, from: self)
         }
         
-        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

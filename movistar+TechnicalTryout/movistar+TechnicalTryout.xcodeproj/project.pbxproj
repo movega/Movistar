@@ -27,7 +27,12 @@
 		D75D65F62BEEA14E0024C3EA /* AccessibleLiveProgramManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75D65F52BEEA14E0024C3EA /* AccessibleLiveProgramManager.swift */; };
 		D7744C372BED398B001EB292 /* ChannelListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7744C362BED398B001EB292 /* ChannelListResponse.swift */; };
 		D7744C392BED39E0001EB292 /* ChannelListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7744C382BED39E0001EB292 /* ChannelListView.swift */; };
-		D7744C3B2BED39F0001EB292 /* ChannelDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7744C3A2BED39F0001EB292 /* ChannelDetailView.swift */; };
+		D7744C3B2BED39F0001EB292 /* InfoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7744C3A2BED39F0001EB292 /* InfoDetailView.swift */; };
+		D7F1F9482BEF942000AB89B2 /* InfoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F1F9472BEF942000AB89B2 /* InfoDetailViewModel.swift */; };
+		D7F1F94C2BEFB52800AB89B2 /* InfoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F1F94B2BEFB52800AB89B2 /* InfoHelper.swift */; };
+		D7F1F94E2BEFBEF800AB89B2 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F1F94D2BEFBEF800AB89B2 /* ErrorView.swift */; };
+		D7F1F9522BEFC02F00AB89B2 /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F1F9512BEFC02F00AB89B2 /* RouterProtocol.swift */; };
+		D7F1F9542BEFC04300AB89B2 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F1F9532BEFC04300AB89B2 /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +79,12 @@
 		D75D65F52BEEA14E0024C3EA /* AccessibleLiveProgramManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibleLiveProgramManager.swift; sourceTree = "<group>"; };
 		D7744C362BED398B001EB292 /* ChannelListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListResponse.swift; sourceTree = "<group>"; };
 		D7744C382BED39E0001EB292 /* ChannelListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListView.swift; sourceTree = "<group>"; };
-		D7744C3A2BED39F0001EB292 /* ChannelDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelDetailView.swift; sourceTree = "<group>"; };
+		D7744C3A2BED39F0001EB292 /* InfoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDetailView.swift; sourceTree = "<group>"; };
+		D7F1F9472BEF942000AB89B2 /* InfoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDetailViewModel.swift; sourceTree = "<group>"; };
+		D7F1F94B2BEFB52800AB89B2 /* InfoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoHelper.swift; sourceTree = "<group>"; };
+		D7F1F94D2BEFBEF800AB89B2 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		D7F1F9512BEFC02F00AB89B2 /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
+		D7F1F9532BEFC04300AB89B2 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +147,9 @@
 		D7331BFF2BED340200A25BA6 /* movistar+TechnicalTryout */ = {
 			isa = PBXGroup;
 			children = (
-				D75D65B22BEE8BCF0024C3EA /* ChannelDetailInfo */,
+				D7F1F9502BEFC00800AB89B2 /* Router */,
+				D7F1F9452BEF7ADF00AB89B2 /* Managers */,
+				D75D65B22BEE8BCF0024C3EA /* ContentDetailInfo */,
 				D75D65B12BEE8BBF0024C3EA /* ChannelList */,
 				D75D65AE2BEE8B8A0024C3EA /* Resources */,
 				D75D65AD2BEE88C20024C3EA /* Network */,
@@ -175,7 +187,6 @@
 				D7331C332BED355200A25BA6 /* Channel.swift */,
 				D7331C352BED35CE00A25BA6 /* LiveProgram.swift */,
 				D7744C362BED398B001EB292 /* ChannelListResponse.swift */,
-				D75D65F52BEEA14E0024C3EA /* AccessibleLiveProgramManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -202,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				D75D65AF2BEE8BA50024C3EA /* Constants.swift */,
+				D7F1F94D2BEFBEF800AB89B2 /* ErrorView.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -216,12 +228,39 @@
 			path = ChannelList;
 			sourceTree = "<group>";
 		};
-		D75D65B22BEE8BCF0024C3EA /* ChannelDetailInfo */ = {
+		D75D65B22BEE8BCF0024C3EA /* ContentDetailInfo */ = {
 			isa = PBXGroup;
 			children = (
-				D7744C3A2BED39F0001EB292 /* ChannelDetailView.swift */,
+				D7F1F9462BEF940200AB89B2 /* ViewModels */,
+				D7744C3A2BED39F0001EB292 /* InfoDetailView.swift */,
 			);
-			path = ChannelDetailInfo;
+			path = ContentDetailInfo;
+			sourceTree = "<group>";
+		};
+		D7F1F9452BEF7ADF00AB89B2 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D75D65F52BEEA14E0024C3EA /* AccessibleLiveProgramManager.swift */,
+				D7F1F94B2BEFB52800AB89B2 /* InfoHelper.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		D7F1F9462BEF940200AB89B2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D7F1F9472BEF942000AB89B2 /* InfoDetailViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		D7F1F9502BEFC00800AB89B2 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				D7F1F9512BEFC02F00AB89B2 /* RouterProtocol.swift */,
+				D7F1F9532BEFC04300AB89B2 /* Router.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		E48436B360B5B5E8DCF1C26A /* Frameworks */ = {
@@ -408,11 +447,14 @@
 			files = (
 				D7744C392BED39E0001EB292 /* ChannelListView.swift in Sources */,
 				D7331C382BED36C200A25BA6 /* ChannelListViewModel.swift in Sources */,
-				D7744C3B2BED39F0001EB292 /* ChannelDetailView.swift in Sources */,
+				D7F1F9522BEFC02F00AB89B2 /* RouterProtocol.swift in Sources */,
+				D7F1F94E2BEFBEF800AB89B2 /* ErrorView.swift in Sources */,
+				D7744C3B2BED39F0001EB292 /* InfoDetailView.swift in Sources */,
 				D7331C052BED340200A25BA6 /* ViewController.swift in Sources */,
 				D75D65F22BEE96740024C3EA /* ChannelListCell.swift in Sources */,
 				D7331C342BED355200A25BA6 /* Channel.swift in Sources */,
 				D75D65F42BEE988A0024C3EA /* ChannelListCellViewModel.swift in Sources */,
+				D7F1F9542BEFC04300AB89B2 /* Router.swift in Sources */,
 				D7744C372BED398B001EB292 /* ChannelListResponse.swift in Sources */,
 				D75D65AC2BEE88870024C3EA /* ApiService.swift in Sources */,
 				D7331C362BED35CE00A25BA6 /* LiveProgram.swift in Sources */,
@@ -420,7 +462,9 @@
 				D75D65B42BEE8DBC0024C3EA /* BaseApiService.swift in Sources */,
 				D7331C032BED340200A25BA6 /* SceneDelegate.swift in Sources */,
 				D75D65B02BEE8BA50024C3EA /* Constants.swift in Sources */,
+				D7F1F94C2BEFB52800AB89B2 /* InfoHelper.swift in Sources */,
 				D75D65F62BEEA14E0024C3EA /* AccessibleLiveProgramManager.swift in Sources */,
+				D7F1F9482BEF942000AB89B2 /* InfoDetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,6 +640,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 87384N2FLP;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "movistar+TechnicalTryout/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -625,6 +670,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 87384N2FLP;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "movistar+TechnicalTryout/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

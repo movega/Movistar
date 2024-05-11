@@ -6,17 +6,20 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
 
 class BaseApiService {
     
-//    func fetchModel<T: Decodable>(urlString: String, modelType: T.Type) -> Observable<T> {
-//        guard let url = URL(string: urlString) else {
-//            return Observable.error(NSError(domain: Constants.Errors.wrongUrl.rawValue, code: -1, userInfo: nil))
-//        }
-//        
-//        return URLSession.shared.rx.data(request: URLRequest(url: url))
-//            .map { data -> T in
-//                return try JSONDecoder().decode(T.self, from: data)
-//            }
-//    }
+    func fetch<T: Decodable>(url: URL) -> Observable<T> {
+        return URLSession.shared.rx.response(request: URLRequest(url: url))
+            .map { (response, data) -> T in
+                if response.statusCode == 200 {
+                    return try JSONDecoder().decode(T.self, from: data)
+                } else {
+                    throw RxCocoaURLError.httpRequestFailed(response: response, data: data)
+                }
+            }
+            .observe(on: MainScheduler.instance)
+    }
 }

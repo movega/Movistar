@@ -19,5 +19,27 @@
 			</array>
 		</dict>
 	</dict>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSExceptionDomains</key>
+        <dict>
+            <key>movistarplus.es</key>
+            <dict>
+                <!-- OPTIONAL: Specify minimum TLS version for SSL connection -->
+                <key>NSExceptionMinimumTLSVersion</key>
+                <string>TLSv1.2</string>
+                <!-- Allow http -->
+                <key>NSExceptionAllowsInsecureHTTPLoads</key>
+                <true/>
+                <!-- key THESE BELOW ARE JUST USED AS EXAMPLE => to be removed if not needed -->
+                <key>NSRequiresCertificateTransparency</key>
+                <false/>
+                <key>NSIncludesSubdomains</key>
+                <true/>
+                <key>NSExceptionRequiresForwardSecrecy</key>
+                <false/>
+            </dict>
+        </dict>
+    </dict>
 </dict>
 </plist>

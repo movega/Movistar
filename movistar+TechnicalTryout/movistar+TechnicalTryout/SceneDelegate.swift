@@ -19,10 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow(windowScene: windowScene)
-        
-        let initialView = ChannelListView()
-        window?.rootViewController = UINavigationController(rootViewController: initialView)
-        window?.makeKeyAndVisible()
+        Router.shared.start(window: window)
     }
 
 }

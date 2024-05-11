@@ -11,5 +11,12 @@ struct Channel: Decodable {
     let id: Int
     let logo: String
     let name: String
-    let live_program: LiveProgram
+    let liveProgram: LiveProgram
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case logo
+        case name
+        case liveProgram = "live_program"
+    }
 }

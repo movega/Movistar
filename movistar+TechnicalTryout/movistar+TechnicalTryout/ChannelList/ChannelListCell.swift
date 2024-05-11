@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Kingfisher
 
 class ChannelListCell: UITableViewCell {
     
@@ -15,13 +16,15 @@ class ChannelListCell: UITableViewCell {
     var channelImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
         return imageView
     }()
 
     var channelNameLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.font = UIFont.systemFont(ofSize: 18, weight: .bold) 
+        label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        label.textColor = Constants.Colors.text
         return label
     }()
 
@@ -31,6 +34,7 @@ class ChannelListCell: UITableViewCell {
         label.numberOfLines = 1
         label.lineBreakMode = .byTruncatingTail
         label.font = UIFont.systemFont(ofSize: 14)
+        label.textColor = Constants.Colors.text
         return label
     }()
 
@@ -45,12 +49,15 @@ class ChannelListCell: UITableViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.numberOfLines = 1
         label.font = UIFont.systemFont(ofSize: 14)
+        label.textColor = Constants.Colors.text
         return label
     }()
     
     var viewModel: ChannelListCellViewModel? {
         didSet{
-            setCellProperties(viewModel)
+            DispatchQueue.main.async {
+                self.setCellProperties(self.viewModel)
+            }
         }
     }
 
@@ -62,6 +69,8 @@ class ChannelListCell: UITableViewCell {
         contentView.addSubview(programNameLabel)
         contentView.addSubview(progressBar)
         contentView.addSubview(timeLabel)
+        
+        contentView.backgroundColor = Constants.Colors.cell.withAlphaComponent(0.5)
         
         setConstraints()
     }
@@ -94,49 +103,37 @@ class ChannelListCell: UITableViewCell {
     }
     
     private func setCellProperties(_ viewModel: ChannelListCellViewModel?) {
-        channelImageView.image = UIImage(systemName: "figure.walk")
+        channelImageView.kf.setImage(with: URL(string: viewModel?.channel.logo ?? "")) { [weak self] result in
+            guard let self else { return }
+            switch result {
+            case .success: return
+            case .failure: channelImageView.image = UIImage(named: "Default")
+            }
+        }
         channelNameLabel.text = viewModel?.channel.name
-        programNameLabel.text = viewModel?.channel.live_program.title
+        programNameLabel.text = viewModel?.channel.liveProgram.title
         
-        guard let startTime = viewModel?.channel.live_program.start_time,
-              let endTime = viewModel?.channel.live_program.end_time,
+        guard let startTime = viewModel?.channel.liveProgram.startTime,
+              let endTime = viewModel?.channel.liveProgram.endTime,
               let currentTime = viewModel?.currentTime
         else {
             progressBar.isHidden = true
             return
         }
         setUpProgressBar(startTime: Double(startTime) ?? 0, endTime: Double(endTime) ?? 0, currentTime: currentTime)
-        setUpTimeLabel(startTime: Double(startTime) ?? 0, endTime: Double(endTime) ?? 0)
+        timeLabel.text = InfoHelper.shared.setUpTimeLabel(startTime: Double(startTime) ?? 0, endTime: Double(endTime) ?? 0)
     }
     
     private func setUpProgressBar(startTime: Double, endTime: Double, currentTime: Double) {
         let startDate = Date(timeIntervalSince1970: startTime / 1000)
-            let endDate = Date(timeIntervalSince1970: endTime / 1000)
-            let currentDate = Date(timeIntervalSince1970: currentTime / 1000)
-
-            // Calcular el tiempo total y el tiempo transcurrido
-            let totalTime = endDate.timeIntervalSince(startDate)
-            let elapsedTime = currentDate.timeIntervalSince(startDate)
-
-            // Calcular el progreso
-            let progress = Float(elapsedTime / totalTime)
-            progressBar.setProgress(progress, animated: true)
+        let endDate = Date(timeIntervalSince1970: endTime / 1000)
+        let currentDate = Date(timeIntervalSince1970: currentTime / 1000)
+        
+        let totalTime = endDate.timeIntervalSince(startDate)
+        let elapsedTime = currentDate.timeIntervalSince(startDate)
+        
+        let progress = Float(elapsedTime / totalTime)
+        progressBar.setProgress(progress, animated: true)
     }
     
-    func setUpTimeLabel(startTime: Double, endTime: Double) {
-        let startDate = Date(timeIntervalSince1970: startTime / 1000)
-        let endDate = Date(timeIntervalSince1970: endTime / 1000)
-        
-        // Creación del DateFormatter
-        let formatter = DateFormatter()
-        formatter.dateFormat = "h:mm a"  // Representación legible de la hora
-        
-        // Formateo de las fechas a String
-        let startString = formatter.string(from: startDate)
-        let endString = formatter.string(from: endDate)
-        
-        // Creación del string de hora
-        let timeString = "\(startString) - \(endString)"
-        timeLabel.text = timeString
-    }
 }

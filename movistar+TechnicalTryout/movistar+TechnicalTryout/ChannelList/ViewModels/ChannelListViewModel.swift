@@ -6,20 +6,22 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
 
 class ChannelListViewModel {
-    let apiService: ApiService
     
-    var channels: [Channel]?
-    var currentTime: Double?
+    private let disposeBag = DisposeBag()
+    private let channelsListResponseRelay = BehaviorRelay<ChannelListResponse?>(value: nil)
     
-    init(apiService: ApiService) {
-        self.apiService = apiService
+    var channelList: Observable<ChannelListResponse?> {
+        return channelsListResponseRelay.asObservable()
     }
     
     func getChannelList() {
-        let channelList = apiService.getChannelList()
-        channels = channelList.channels
-        currentTime = channelList.currentTime
+        ApiService.shared.getChannelList().map { response in
+            let sortedChannels = response.channels.sorted(by: { $0.id < $1.id })
+            return ChannelListResponse(channels: sortedChannels, currentTime: response.currentTime)
+        }.bind(to: self.channelsListResponseRelay).disposed(by: disposeBag)
     }
 }

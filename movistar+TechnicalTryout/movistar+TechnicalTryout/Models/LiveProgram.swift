@@ -10,9 +10,21 @@ import Foundation
 struct LiveProgram: Decodable {
     let id: Int
     let title: String
-    let category: String? = nil
-    let end_time: String
-    let start_time: String
+    var cover: String? = nil
+    var description: String? = nil
+    var category: String? = nil
+    let endTime: String
+    let startTime: String
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case title
+        case cover
+        case description
+        case category
+        case endTime = "end_time"
+        case startTime = "start_time"
+    }
 }
 
 extension LiveProgram {

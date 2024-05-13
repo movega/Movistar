@@ -19,6 +19,9 @@
 		D7331C342BED355200A25BA6 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7331C332BED355200A25BA6 /* Channel.swift */; };
 		D7331C362BED35CE00A25BA6 /* LiveProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7331C352BED35CE00A25BA6 /* LiveProgram.swift */; };
 		D7331C382BED36C200A25BA6 /* ChannelListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7331C372BED36C200A25BA6 /* ChannelListViewModel.swift */; };
+		D7507A202BF2019C00BF3677 /* ContentInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7507A1F2BF2019C00BF3677 /* ContentInfo.swift */; };
+		D7507A222BF2054500BF3677 /* ApiEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7507A212BF2054500BF3677 /* ApiEndpoints.swift */; };
+		D7507A242BF2061800BF3677 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7507A232BF2061800BF3677 /* NetworkErrors.swift */; };
 		D75D65AC2BEE88870024C3EA /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75D65AB2BEE88870024C3EA /* ApiService.swift */; };
 		D75D65B02BEE8BA50024C3EA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75D65AF2BEE8BA50024C3EA /* Constants.swift */; };
 		D75D65B42BEE8DBC0024C3EA /* BaseApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75D65B32BEE8DBC0024C3EA /* BaseApiService.swift */; };
@@ -72,6 +75,9 @@
 		D7331C332BED355200A25BA6 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		D7331C352BED35CE00A25BA6 /* LiveProgram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveProgram.swift; sourceTree = "<group>"; };
 		D7331C372BED36C200A25BA6 /* ChannelListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListViewModel.swift; sourceTree = "<group>"; };
+		D7507A1F2BF2019C00BF3677 /* ContentInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentInfo.swift; sourceTree = "<group>"; };
+		D7507A212BF2054500BF3677 /* ApiEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoints.swift; sourceTree = "<group>"; };
+		D7507A232BF2061800BF3677 /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
 		D75D65AB2BEE88870024C3EA /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		D75D65AF2BEE8BA50024C3EA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D75D65B32BEE8DBC0024C3EA /* BaseApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseApiService.swift; sourceTree = "<group>"; };
@@ -189,6 +195,7 @@
 				D7331C332BED355200A25BA6 /* Channel.swift */,
 				D7331C352BED35CE00A25BA6 /* LiveProgram.swift */,
 				D7744C362BED398B001EB292 /* ChannelListResponse.swift */,
+				D7507A1F2BF2019C00BF3677 /* ContentInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -207,6 +214,8 @@
 			children = (
 				D75D65AB2BEE88870024C3EA /* ApiService.swift */,
 				D75D65B32BEE8DBC0024C3EA /* BaseApiService.swift */,
+				D7507A212BF2054500BF3677 /* ApiEndpoints.swift */,
+				D7507A232BF2061800BF3677 /* NetworkErrors.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -454,6 +463,7 @@
 				D7F1F94E2BEFBEF800AB89B2 /* ErrorView.swift in Sources */,
 				D7744C3B2BED39F0001EB292 /* InfoDetailView.swift in Sources */,
 				D7F1F9562BEFE1DA00AB89B2 /* ChannelManager.swift in Sources */,
+				D7507A222BF2054500BF3677 /* ApiEndpoints.swift in Sources */,
 				D7331C052BED340200A25BA6 /* ViewController.swift in Sources */,
 				D75D65F22BEE96740024C3EA /* ChannelListCell.swift in Sources */,
 				D7331C342BED355200A25BA6 /* Channel.swift in Sources */,
@@ -465,10 +475,12 @@
 				D7331C012BED340200A25BA6 /* AppDelegate.swift in Sources */,
 				D75D65B42BEE8DBC0024C3EA /* BaseApiService.swift in Sources */,
 				D7331C032BED340200A25BA6 /* SceneDelegate.swift in Sources */,
+				D7507A242BF2061800BF3677 /* NetworkErrors.swift in Sources */,
 				D75D65B02BEE8BA50024C3EA /* Constants.swift in Sources */,
 				D7F1F94C2BEFB52800AB89B2 /* InfoHelper.swift in Sources */,
 				D75D65F62BEEA14E0024C3EA /* LiveProgramManager.swift in Sources */,
 				D7F1F9482BEF942000AB89B2 /* InfoDetailViewModel.swift in Sources */,
+				D7507A202BF2019C00BF3677 /* ContentInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

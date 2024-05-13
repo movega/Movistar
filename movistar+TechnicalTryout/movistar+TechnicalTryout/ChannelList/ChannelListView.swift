@@ -42,6 +42,12 @@ class ChannelListView: UIViewController {
             }
         }).disposed(by: disposeBag)
         
+        self.viewModel.errors.subscribe(
+            onNext: { error in
+                Router.shared.showError(message: error.localizedDescription, from: self)
+            }
+        ).disposed(by: disposeBag)
+        
         self.viewModel.getChannelList()
         
     }

@@ -9,18 +9,7 @@ import Foundation
 import UIKit
 
 struct Constants {
-    struct URL {
-        static let main = "https://api.npoint.io/"
-    }
-    
-    struct EndPoints {
-        static let channelList = "f5552c061b8cf68cffa0"
-        static let channelDetail = "f3c6446abeb1c5a82079"
-    }
-    
     enum Errors: String {
-        case wrongUrl = "Invalid URL"
-        case failedToParseUrl = "Failed to decode the url"
         case unknownError = "Unknown error"
     }
     

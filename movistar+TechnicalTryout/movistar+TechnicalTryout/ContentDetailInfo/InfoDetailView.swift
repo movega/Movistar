@@ -105,13 +105,20 @@ class InfoDetailView: UIViewController {
         setConstraints()
         
         self.viewModel.detailInfo.asObservable().subscribe(onNext:{
-            [weak self] program in
-            guard let self, let program else { return }
+            [weak self] content in
+            guard let self, let content, let program = content.liveProgram else { return }
            DispatchQueue.main.async {
-               self.setProperties(program: program, channelName: self.viewModel.channelName, channelLogo: self.viewModel.channelLogo)
+               self.setProperties(program: program, channelName: content.channelName, channelLogo: content.channelLogo)
             }
         }).disposed(by: disposeBag)
         
+        self.viewModel.errors.subscribe(
+            onNext: { error in
+                Router.shared.showError(message: error.localizedDescription, from: self)
+            }
+        ).disposed(by: disposeBag)
+        
+        self.viewModel.prepare()
     }
     
     private func setConstraints() {
